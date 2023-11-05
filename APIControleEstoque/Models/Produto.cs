@@ -1,7 +1,12 @@
-﻿namespace APIControleEstoque.Models
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace APIControleEstoque.Models
 {
-    public class Produto
+    [Table("Produto")]
+    public class Produto 
     {
+        [Key]
         public int Id { get; set; }
 
         public string? Nome { get; set; }
